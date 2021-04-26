@@ -5,6 +5,7 @@
 2. For Playwright Docs Click this link [playwright](https://playwright.dev/docs/intro/)
 3. For Jest framework (same like TestNG) click this link [jest](https://jestjs.io/docs/getting-started)
 4. For Jest Assertion click this link [jest-assertion](https://jestjs.io/docs/expect)
+5. For Jest-cli means how to run form command-line. follow this link [jest-cli](https://jestjs.io/docs/cli)
 ## What is Playwright?
 The playwright is a Node.js library to automate Chromium, Firefox, and WebKit with a single API. Playwright is built to enable cross-browser web testing.
 
@@ -39,16 +40,19 @@ Playwright enables fast, reliable, and capable automation across all modern brow
 ## How to create package.json
 > Control + J --> npm init -y
 
-## How to add dependencies
-* Paste this dependencies
->   "devDependencies": {
+## How to add dependencies inside package.json file
+* Paste this dependencies inside package.json
+```
+ "devDependencies": 
+  {
     "@types/jest": "^26.0.20",
     "jest": "^26.6.3",   
     "jest-playwright-preset": "^1.4.5",  
     "playwright": "^1.8.0",   
     "typescript": "^4.1.3" ,
-    "ts-jest": "^26.5.0"},
-
+    "ts-jest": "^26.5.0"
+  }
+```
 * To install dependencies
 > npm + i (only available in this package not global) & all file will store in **_nodel modules_**
 
@@ -98,3 +102,11 @@ then, paste this inside ** _package.json file_**
   * npm i -g jest-cli
   * To run specefic test case:- jest P02_Click_Fill_Text.test.ts 
   * No need to mention the package name or folder name
+ ## How to add vs-code-project to github
+ ```
+  1. Open your new project folder with vscode.
+  2. click on the source conrol menu on the sidebar (or press Ctrl+Shift+G)
+  3. Click on publish to github.
+  4. From there just login and follow the instructions and you're good to go.
+  extremely easy it will ask to login that's all
+ ```
