@@ -112,3 +112,8 @@ then, paste this inside ** _package.json file_**
  ```
  # How to run cli-command to open website to record script
  Just run this command = npx playwright codegen wikipedia.org 
+
+ # How to upload file
+ 1. if HTML tag _"input"_ is present and we have _"type = file"_ then we can use _page.setInputFiles_
+ 2. if Not input tage then in selenium we use 3rd party tool like robot class or sikuli or autoit
+ but in this we use filechooser.setFiles(filePath1) using listener & also it handle a window popup.
