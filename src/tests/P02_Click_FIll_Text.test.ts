@@ -14,7 +14,7 @@ describe('basic actions', () => {
         await page.click("//input[@id='benzcheck']")
         console.log(await page.innerText("//h1[normalize-space()='Practice Page']"))
 
-        await browser.close();
+        //await browser.close();
     })
 
 

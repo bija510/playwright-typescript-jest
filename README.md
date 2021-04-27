@@ -110,3 +110,5 @@ then, paste this inside ** _package.json file_**
   4. From there just login and follow the instructions and you're good to go.
   extremely easy it will ask to login that's all
  ```
+ # How to run cli-command to open website to record script
+ Just run this command = npx playwright codegen wikipedia.org 
