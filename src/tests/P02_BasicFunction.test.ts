@@ -11,11 +11,20 @@ describe('basic actions', () => {
         const page = await context.newPage();
         await page.goto("https://learn.letskodeit.com/p/practice")
 
-        //1. sendkeys
+        //1a. fill (clear & fill)
         await page.fill("//input[@id='name']", 'for test')
 
+        //1b. type(by default it apppend in begnning & to append at end follow this trick)
+        const showHideTxt = await page.$("//input[@id='displayed-text']")
+        await showHideTxt?.fill("aFor")
+        await showHideTxt?.focus()
+        await showHideTxt?.type(' apple')
+        await new Promise(r => setTimeout(r, 2000));
+
+        //how to clear
+        await showHideTxt?.fill('')
+
         //2. get Attribute of any like id, name, placeholder, value
-        await page.fill("//input[@id='displayed-text']", 'apple')
         console.log(await page.getAttribute("//input[@id='displayed-text']", 'name')) //show-hide
 
         //3. radio button & force click where click don't work
