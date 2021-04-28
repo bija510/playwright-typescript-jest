@@ -27,6 +27,7 @@ describe('Record script', () => {
         await page.fill('input[name="search"]', 'nepal');
         await page.click('button:has-text("Search")');
         await page.click('text=Nepal');
+
         await context.close();
         await browser.close();
 
