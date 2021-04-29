@@ -5,6 +5,7 @@ describe("Window handling", () => {
     let browser: Browser;
     let context: BrowserContext;
     let page: Page;
+
     beforeAll(async () => {
         browser = await chromium.launch({
             headless: false
