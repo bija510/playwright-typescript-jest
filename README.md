@@ -134,4 +134,4 @@ then, paste this inside ** _package.json file_**
   4. Then declare this const variable & use Example:-  data.firstName, data.lastName..
   ```
   let data = <any>testData
-  ``
+  ```
