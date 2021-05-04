@@ -18,7 +18,7 @@ export default class OrangeHRM {
         await this.page.fill(this.TxtBxLogin, email);
         await this.page.fill(this.TxtBxPassword, password);
         await this.page.click(this.BtnLogin);
-        await this.page.waitForNavigation({ waitUntil: 'domcontentloaded' });
+        // await this.page.waitForNavigation({ waitUntil: 'domcontentloaded' });
     };
 
 }

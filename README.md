@@ -110,15 +110,15 @@ then, paste this inside ** _package.json file_**
   4. From there just login and follow the instructions and you're good to go.
   extremely easy it will ask to login that's all
  ```
- # How to run cli-command to open website to record script
+ ## How to run cli-command to open website to record script
  Just run this command = npx playwright codegen wikipedia.org 
 
- # How to upload file
+ ## How to upload file
  1. if HTML tag _"input"_ is present and we have _"type = file"_ then we can use _page.setInputFiles_
  2. if Not input tage then in selenium we use 3rd party tool like robot class or sikuli or autoit
  but in this we use filechooser.setFiles(filePath1) using listener & also it handle a window popup.
 
- # How to read JSON data file.
+ ## How to read JSON data file.
  1. create testData.json file
  2. create pwright.config.ts file & paste this
  ```
@@ -134,4 +134,9 @@ then, paste this inside ** _package.json file_**
   4. Then declare this const variable & use Example:-  data.firstName, data.lastName..
   ```
   let data = <any>testData
+  ```
+
+  ## How to run Test Suite/ multiple .ts file.
+  ```
+  jest LoginTest.test.ts P10_Alert.test.ts P05_UploadFile.test.ts
   ```
