@@ -117,3 +117,21 @@ then, paste this inside ** _package.json file_**
  1. if HTML tag _"input"_ is present and we have _"type = file"_ then we can use _page.setInputFiles_
  2. if Not input tage then in selenium we use 3rd party tool like robot class or sikuli or autoit
  but in this we use filechooser.setFiles(filePath1) using listener & also it handle a window popup.
+
+ # How to read JSON data file.
+ 1. create testData.json file
+ 2. create pwright.config.ts file & paste this
+ ```
+  declare module "*.json" {
+    const value: any;
+    export default value
+  }
+ ```
+ 3. Then in the LoginTest.test.ts file import this.
+  ```
+  import * as testData from "../../data/TestData.json"
+  ```
+  4. Then declare this const variable & use Example:-  data.firstName, data.lastName..
+  ```
+  let data = <any>testData
+  ``

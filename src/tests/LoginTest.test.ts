@@ -1,11 +1,13 @@
 import { Browser, BrowserContext, Page, chromium } from "playwright";
-import FacebookUtilities from "./loginPage";
+import OrangeHRM from "../pages/loginPage";
+import * as testData from "../../data/TestData.json"
 
 describe("Frames handling concept", () => {
 
     let browser: Browser;
     let context: BrowserContext;
     let page: Page;
+    const data = <any>testData
 
     beforeAll(async () => {
         browser = await chromium.launch({
@@ -13,13 +15,13 @@ describe("Frames handling concept", () => {
         });
         context = await browser.newContext()
         page = await context.newPage();
-        await page.goto("https://www.facebook.com/")
+        await page.goto(data.url)
     })
 
     test("Interact with frames", async () => {
         // LoginPage.ts
-        const facebookUtilities = new FacebookUtilities(page, context);
-        await facebookUtilities.login('apple', "abdd")
+        let orgHRM = new OrangeHRM(page, context);
+        await orgHRM.login(data.userName, data.password)
 
     })
 
