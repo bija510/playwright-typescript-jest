@@ -140,3 +140,17 @@ then, paste this inside ** _package.json file_**
   ```
   jest LoginTest.test.ts P10_Alert.test.ts P05_UploadFile.test.ts
   ```
+
+  ## How to get html report.
+  * add this inside the devDependencies & jest.
+  ```
+   "devDependencies": {
+        "jest-html-reporter": "^3.3.0"
+    },
+    "jest": {
+        "reporters": ["default", "./node_modules/jest-html-reporter"]
+        }
+  ```
+  * Then to install:- npm i
+  * The test-report.html will be created in root directory & show in console as well.
+  * To open Right-click on report & Open with live server.

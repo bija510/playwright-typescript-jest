@@ -2,7 +2,7 @@ import { Browser, BrowserContext, Page, chromium } from "playwright";
 import OrangeHRM from "../pages/loginPage";
 import * as testData from "../../data/TestData.json"
 
-describe("Frames handling concept", () => {
+describe("Login", () => {
 
     let browser: Browser;
     let context: BrowserContext;
@@ -18,7 +18,7 @@ describe("Frames handling concept", () => {
         await page.goto(data.url)
     })
 
-    test("Interact with frames", async () => {
+    test("login to orangeHrm application", async () => {
         // LoginPage.ts
         let orgHRM = new OrangeHRM(page, context);
         await orgHRM.login(data.userName, data.password)
