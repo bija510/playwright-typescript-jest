@@ -152,5 +152,7 @@ then, paste this inside ** _package.json file_**
         }
   ```
   * Then to install:- npm i
-  * The test-report.html will be created in root directory & show in console as well.
-  * To open Right-click on report & Open with live server.
+  * Just run the test in terminal:-
+    - jest LoginTest.test.ts P12_Jest_Assertion.test.ts
+  * And the test-report.html file will be created in root directory & show in console as well.
+  * To open report in browser. Right-click on report & Open with live server.
