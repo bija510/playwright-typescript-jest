@@ -136,11 +136,37 @@ then, paste this inside ** _package.json file_**
   let data = <any>testData
   ```
 
-  ## How to run Test Suite/ multiple .ts file.
+  ## How to Run test script file (.ts or .js) from the command line.
   ```
-  jest LoginTest.test.ts P10_Alert.test.ts P05_UploadFile.test.ts
-  ```
+  # How to run single LoginTest.test.ts file
+    jest LoginTest.test.ts
 
+  # How to run Test Suite/ multiple .ts file.
+    jest LoginTest.test.ts P10_Alert.test.ts P05_UploadFile.test.ts
+ 
+  # How to run tests related to changed files based on hg/git (uncommitted files):
+    jest -o
+
+  # How to run all tests (default):
+    jest
+
+  # How to run tests that match this spec name (match against the name in describe or test, basically).
+    jest -t Handeling various Alert
+
+  # How to run test with test coverage
+    - jest LoginTest.test.ts --collectCoverage
+
+  # How to skip the describe block or test block
+    - describe.skip(name, fn) or under the alias: xdescribe(name, fn)
+    - test.skip(name, fn) or xtest(name, fn)
+
+  # when you are planning on writing tests. These tests will be highlighted in the summary output at the end so you know how many tests you still need todo.
+    - test.todo 
+
+  # How to run test concurrently means at the same time or parallel.
+    - test.concurrent [for 4 test & all will run at same time]
+  
+  ```
   ## How to get html report.
   * add this inside the devDependencies & jest.
   ```

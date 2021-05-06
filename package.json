@@ -22,7 +22,16 @@
         "transform": {
             "^.+\\.tsx?$": "ts-jest"
         },
-        "reporters": ["default", "./node_modules/jest-html-reporter"],
+        "reporters": [
+            "default", ["./node_modules/jest-html-reporter", {
+                "publicPath": "./html-report",
+                "filename": "report.html",
+                "expand": true,
+                "openReport": true,
+                "pageTitle": "playwright-typescript-jest html Report"
+            }]
+        ],
+
         "moduleFileExtensions": [
             "ts",
             "tsx",
