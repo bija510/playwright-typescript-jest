@@ -2,3 +2,5 @@
 /video
 test-report.html
 /coverage
+/allure-report
+/allure-results

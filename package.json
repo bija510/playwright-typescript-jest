@@ -16,22 +16,26 @@
         "playwright": "^1.10.0",
         "ts-jest": "^26.5.0",
         "typescript": "^4.1.3",
-        "jest-html-reporter": "^3.3.0"
+        "jest-html-reporter": "^3.3.0",
+        "jest-allure": "^0.1.3"
     },
     "jest": {
         "transform": {
             "^.+\\.tsx?$": "ts-jest"
         },
         "reporters": [
-            "default", ["./node_modules/jest-html-reporter", {
-                "publicPath": "./html-report",
-                "filename": "report.html",
-                "expand": true,
-                "openReport": true,
-                "pageTitle": "playwright-typescript-jest html Report"
-            }]
+            "default",
+            [
+                "./node_modules/jest-html-reporter",
+                {
+                    "publicPath": "./html-report",
+                    "filename": "report.html",
+                    "expand": true,
+                    "openReport": true,
+                    "pageTitle": "playwright-typescript-jest html Report"
+                }
+            ]
         ],
-
         "moduleFileExtensions": [
             "ts",
             "tsx",
