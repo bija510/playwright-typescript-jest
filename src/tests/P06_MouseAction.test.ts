@@ -1,6 +1,18 @@
-import { chromium, firefox } from "playwright";
+import { chromium, ChromiumBrowser, ChromiumBrowserContext, Page } from "playwright";
 
 describe('Mouse Actions', () => {
+
+    let browser: ChromiumBrowser;
+    let context: ChromiumBrowserContext;
+    let page: Page;
+
+    beforeAll(async () => {
+        browser = await chromium.launch({
+            headless: false
+        })
+        context = await browser.newContext();
+        page = await context.newPage();
+    })
 
     test('mouse action', async () => {
 
@@ -27,8 +39,14 @@ describe('Mouse Actions', () => {
         // Click the top left corner
         await page.click('#item', { position: { x: 0, y: 0 } });
 
-        //await browser.close();
-        //await context.close();
+    })
+
+    afterAll(async () => {
+        await new Promise(r => setTimeout(r, 3000));
+        await page.close()
+        await context.close()
+        await browser.close()
+
     })
 
 

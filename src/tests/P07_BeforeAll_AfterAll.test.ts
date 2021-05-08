@@ -23,7 +23,8 @@ test('click fill and innerText', async () => {
 afterAll(async () => {
     //Javascript hard wait
     await new Promise(r => setTimeout(r, 5000));
-    await browser.close();
-    await context.close();
+    await page.close()
+    await context.close()
+    await browser.close()
 
 })

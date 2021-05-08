@@ -147,8 +147,12 @@ then, paste this inside ** _package.json file_**
   # How to run tests related to changed files based on hg/git (uncommitted files):
     jest -o
 
-  # How to run all tests (default):
+  # How to run all tests in parellel.
     jest
+
+  # How to run all test sequentially.
+    jest --maxWorkers 1
+    jest -w 1 also works, as an alias.
 
   # How to run tests that match this spec name (match against the name in describe or test, basically).
     jest -t Handeling various Alert
@@ -183,16 +187,19 @@ then, paste this inside ** _package.json file_**
   * And the test-report.html file will be created in root directory & show in console as well.
   * To open report in browser. Right-click on report & Open with live server.
 
-  ## How to get advanced Allure-jest html report
-  1. Paste this inside the package.json inside devDependencies 
-    ```
+  ## How to get advanced Allure-jest html report 
+  1. Documentation:
+   * Github :- https://github.com/zaqqaz/jest-allure &
+   * NPM :- https://www.npmjs.com/package/jest-allure
+  2. Paste this inside the package.json inside devDependencies 
+  ```
     "devDependencies": {
             "jest-allure": "^0.1.3"
         },
-    ```
+  ```
       
-  2. Create a jest.config.js file in root directory & paste this.
-    ```
+  3. Create a jest.config.js file in root directory & paste this.
+  ```
       module.exports = {
       "roots": [
           "<rootDir>/src"
@@ -207,14 +214,14 @@ then, paste this inside ** _package.json file_**
       "reporters": ["default", "jest-allure"],
       "setupFilesAfterEnv": ["jest-allure/dist/setup"],
       }
-    ```
-  3. Run this command to install :- npm i
-  4. Just run the script :- jest LoginTest.test.ts P10_Alert.test.ts P05_UploadFile.test.ts
-  5. Allure-result folder will generated with .xml file.
-  6. Run this command in c:\user\userName> npm i -g allure-commandline
-  7. Come back to the Vs-code terminal & run :- npm i -g jest-allure-reporter
-  8. Run command :- allure serve
-  9. It will open the browser with allure dashboard service with report.
-  10. But to generate the allure HTML Report run this in terminal :- allure generate
-  11. It will generate the allure html report inside allure-report folder.
+  ```
+  4. Run this command to install :- npm i
+  5. Just run the script :- jest LoginTest.test.ts P10_Alert.test.ts P05_UploadFile.test.ts
+  6. Allure-result folder will generated with .xml file.
+  7. Run this command in c:\user\userName> npm i -g allure-commandline
+  8. Come back to the Vs-code terminal & run :- npm i -g jest-allure-reporter
+  9. Run command :- allure serve
+  10. It will open the browser with allure dashboard service with report.
+  11. But to generate the allure HTML Report run this in terminal :- allure generate
+  12. It will generate the allure html report inside allure-report folder.
 
