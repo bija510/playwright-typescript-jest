@@ -78,7 +78,7 @@ Playwright enables fast, reliable, and capable automation across all modern brow
 }
 ```
 then, paste this inside ** _package.json file_**
-```
+```js
 "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
